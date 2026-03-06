@@ -1,0 +1,24 @@
+Tat ca nhung file zip can thiet em xin phep de trong duong dan nay a: https://drive.google.com/drive/folders/1kEEgu97qkuRAbF0U8OCg0N7_I-rEEAEd?usp=sharing
+
+# Nhung phan nay chi can chay 1 lan khi khoi tao pod moi a:
+apt-get update && apt-get install -y unzip
+unzip Chatbot.zip
+unzip medical_embedding_model.zip
+unzip qa_vector_db.zip
+unzip NER_trained_model.zip
+unzip product_images.zip
+unzip product_vector_db.zip
+
+# Make sure you are in the workspace
+cd /workspace/Chatbot
+
+# Download Qwen2.5-7B-Instruct (Quantized) and rename it to qwen.gguf
+wget -O qwen.gguf https://huggingface.co/bartowski/Qwen2.5-7B-Instruct-GGUF/resolve/main/Qwen2.5-7B-Instruct-Q4_K_M.gguf
+
+cd /workspace
+
+# Nhung phan nay can chay moi lan ket noi lai voi pod a:
+Install python extension
+bash /workspace/setup_env.sh
+
+# Chay chuong trinh: app_gradio.py
